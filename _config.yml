@@ -1,6 +1,6 @@
 title: Performance Pipeline
 description: Performance Pipeline Description
-sourcecode: "https://github.com/gchauras/much-worse-jekyll-theme"
+sourcecode: "https://github.com/performance-pipeline/performance-pipeline.github.io"
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
