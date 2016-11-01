@@ -5,7 +5,7 @@ sourcecode: "https://github.com/performance-pipeline/performance-pipeline.github
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 
-url: "http://gchauras.github.io"     # the base hostname & protocol for your site
+url: "http://performance-pipeline.com"     # the base hostname & protocol for your site
 baseurl: ""                   # the subpath of your site, e.g. /blog
 
 author:
