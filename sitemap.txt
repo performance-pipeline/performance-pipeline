@@ -3,7 +3,6 @@ http://performance-pipeline.com/about/
 http://performance-pipeline.com/feed.xml
 http://performance-pipeline.com/
 http://performance-pipeline.com/css/main.css
-http://performance-pipeline.com/misc/
 http://performance-pipeline.com/sitemap.txt
 http://performance-pipeline.com/feed.xslt.xml
 
