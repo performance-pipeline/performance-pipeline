@@ -4,7 +4,6 @@ title: The Performance Pipeline
 permalink: /
 ---
 
-The Performance Pipeline
 Performance is a critical cornerstone of a successful application running in a production environment, just like quality and security. In order to make performance testing a first class citizen, that you must consider it during every phase of your application lifecycle. Of course you need to look for different types of issues at the various stages of your application lifecycle, as you would with quality testing, for example. Thinking about performance during every stage of your application lifecycle is core to the performance pipeline concept.
 
 
