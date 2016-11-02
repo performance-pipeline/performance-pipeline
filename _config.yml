@@ -3,7 +3,7 @@ description: Performance Pipeline Description
 sourcecode: "https://github.com/performance-pipeline/performance-pipeline.github.io"
 
 permalink: blog/:year/:month/:day/:title
-exclude: ["Makefile", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock"]
 
 url: "http://performance-pipeline.com"     # the base hostname & protocol for your site
 baseurl: ""                   # the subpath of your site, e.g. /blog
