@@ -1,8 +1,12 @@
 
-http://performance-pipeline.com/about/
+http://performance-pipeline.com/design/
+http://performance-pipeline.com/development/
 http://performance-pipeline.com/feed.xml
 http://performance-pipeline.com/
 http://performance-pipeline.com/css/main.css
+http://performance-pipeline.com/production/
+http://performance-pipeline.com/requirements-analysis/
 http://performance-pipeline.com/sitemap.txt
+http://performance-pipeline.com/test/
 http://performance-pipeline.com/feed.xslt.xml
 

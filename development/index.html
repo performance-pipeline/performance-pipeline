@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Performance Pipeline :: Development</title>
+    <meta name="description" content="Performance Pipeline Description">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://performance-pipeline.com/development/">
+    <link rel="alternate" type="application/rss+xml" title="Performance Pipeline" href="http://performance-pipeline.com/feed.xml" />
+
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+  <div class="page">
+    <header class="site-header">
+    <a class="site-title" href="/">Performance Pipeline</a>
+    <nav class="site-nav">
+        <a href="#" class="menu-icon menu.open">
+            <svg viewBox="0 0 18 15">
+                <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+        </a>
+        <div class="trigger"><h1>Main Navigation</h1>
+            <ul class="menu">
+    
+    
+     <li><a href="/requirements-analysis/" class="page-link">Req Analysis</a>
+    
+    </li>
+    
+    
+     <li><a href="/design/" class="page-link">Design</a>
+    
+    </li>
+    
+    
+     <li><a href="/development/" class="page-link">Development</a>
+    
+    </li>
+    
+    
+     <li><a href="/test/" class="page-link">Test</a>
+    
+    </li>
+    
+    
+     <li><a href="/production/" class="page-link">Production</a>
+    
+    </li>
+    
+</ul>
+
+        </div>
+    </nav>
+</header>
+
+
+    <div class="post">
+    <header class="post-header">
+        <h1>Development</h1>
+    </header>
+
+    <p><img src="/images/performance-pipeline-development.png" alt="performance-pipeline-image" title="The Performance Pipeline - Development Phase" /></p>
+
+<p>The development phase is the first time you get to quantifiably test code that could make it into production. The important question is, what should you be testing and what shouldn’t you be testing in this phase? It’s important to appreciate that the test environment that you run in development will have major differences from a production deployment. If you’re not strategic with what and how you test, you could find yourselves wasting time by testing without accurate data. For instance, performing tests such as stress or load testing too early may result in false bottlenecks existing in an area of your application that simply doesn’t appear in production. Let’s look at the types of issues that you can test for during development:</p>
+
+<p><strong>Inefficient Application Code</strong></p>
+
+<p>You should know where you’re spending most of your time within application requests. Note that there’s no need to dig too deep at this stage as you’ll be working from development specific data. You wouldn’t paint a wall before it’s plastered, but you would do everything you can to make sure it’s flat before you plaster. Look for where you’re spending most of your relative time at this stage. If one method is taking 500% more time than the others, investigate it to see if there are ways to understand why, and fix if possible. Common code smells like poor use of APIs, resource contention or invoking unnecessary code etc tend to be easier to fix earlier and are most noticeable during development.</p>
+
+<p><strong>Inefficient Database Access</strong></p>
+
+<p>Database access is a prime suspect for poorly performing code. Often IO queries are simply too slow. Sometimes application code can be creating more queries than is necessary. The queries may all individually be reasonably, but looking at the bigger picture, your data fetching strategy could be too lazy or eager than what the user experience should demand. It’s prudent to understand how much time you’re spending in the database, but again be wary of the development to production differences in your configuration and data. It’s far nicer to fix database access issues in simpler development scenarios, rather than finding them due to load or stress testing further down the line.</p>
+
+<p><strong>Concurrency Bugs</strong></p>
+
+<p>When making decisions as simple as which collection to use to store data, it’s important to understand how concurrency will affect your choices. How is the class you’re writing going to be accessed by users? Make sure if there’s even a chance that your class could have concurrency concerns, which is likely, write defensive code with concurrency in mind.</p>
+
+<p><strong>Oversized Session Data</strong></p>
+
+<p>Session Data can easily grow out of control, without much of an impact to the single user in your development environment. However, when your application is scaled, large sessions can cause severe issues if you’re in a production environment with limited resources. If your production environment is more capable, you’ll just be left with a clumsier, slower application if you tend to  manipulate the session data.</p>
+
+<p><strong>Code Reviews</strong></p>
+
+<p>A cheap place to be retrospective on your code is during code reviews. It’s not unusual for developers to focus more on the functional aspects of code during a code review. However it’s very important that the aspects mentioned above are thought about during a code review as well to help prevent performance bugs slipping into the next phase, making them more expensive to fix.</p>
+
+<p><em><strong>Take aways</strong></em></p>
+<ul>
+  <li><em><strong>Databases and inefficient code</strong> are the most likely areas for performance issues.</em>
+    <ul>
+      <li><em>Check your IO queries are fast and few.</em></li>
+    </ul>
+  </li>
+  <li><em>Understand where your application is spending its time.</em></li>
+  <li><em>Think about <strong>performance in code reviews</strong>. Consider the performance implications of code changes.</em></li>
+</ul>
+
+<p>Next Stage: <a href="/test">Test</a></p>
+
+</div>
+
+
+    <footer class="site-footer">
+    Performance Pipeline Description<br />
+
+    Using <a href="http://jekyllrb.com/">Jekyll</a>
+    
+     :: <a href="https://github.com/performance-pipeline/performance-pipeline.github.io">Website source</a>
+    
+     :: <a href="http://jekyllthemes.org/themes/much-worse/">Much Worse Template</a>
+</footer>
+
+
+    
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86768137-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+    </div>
+  </body>
+
+</html>
