@@ -1,2 +1,14 @@
-- title: "About"
-  href: "/about/"
+- title: "Req Analysis"
+  href: "/requirements-analysis/"
+
+- title: "Design"
+  href: "/design/"
+
+- title: "Development"
+  href: "/development/"
+
+- title: "Test"
+  href: "/test/"
+
+- title: "Production"
+  href: "/production/"
