@@ -5,8 +5,13 @@
     <description>Performance Pipeline Description</description>
     <link>http://performance-pipeline.com/</link>
     <atom:link href="http://performance-pipeline.com/feed.xml" rel="self" type="application/rss+xml"/>
+<<<<<<< HEAD
     <pubDate>Wed, 08 Mar 2017 16:51:19 +0000</pubDate>
     <lastBuildDate>Wed, 08 Mar 2017 16:51:19 +0000</lastBuildDate>
+=======
+    <pubDate>Tue, 15 Nov 2016 10:46:11 +0200</pubDate>
+    <lastBuildDate>Tue, 15 Nov 2016 10:46:11 +0200</lastBuildDate>
+>>>>>>> 22d3c547d18a6b9aef4c217ec102361212170951
     <generator>Jekyll v3.3.0</generator>
     
   </channel>
