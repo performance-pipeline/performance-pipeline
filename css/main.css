@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+
 .site-header {
   border-bottom: 1px solid #ccc;
   position: relative;
@@ -186,7 +188,7 @@ html {
   overflow-y: scroll; }
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: x-large;
   line-height: 1.5;
   color: #222;
